@@ -115,4 +115,4 @@ There currently is only one NoteFinder, with the same behaviour as the one in ba
     </tbody>
 </table>
 
-{{< alert icon="ℹ️" text="The default configuration of StartFreq is different than cnlohr's implementation. If you want behaviour to match with his default configurations, change StartFreq to 55.0." >}}
+{{< alert icon="ℹ️" text="The default configuration of StartFreq is different than cnlohr's implementation. If you want behaviour to match with his default configurations, change StartFreq to 55.0." />}}

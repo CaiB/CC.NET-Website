@@ -14,7 +14,7 @@ Thank you to Will for patiently helping me understand the inner workings, and th
 
 This applies to both cnlohr's ColorChord and ColorChord.NET.
 
-{{< alert icon="❗" text="Chromium-based browsers (e.g. Chrome, Edge) do not support MathML, so the equations will not show up correctly. Use Firefox or Safari instead." >}}
+{{< alert icon="❗" text="Chromium-based browsers (e.g. Chrome, Edge) do not support MathML, so the equations will not show up correctly. Use Firefox or Safari instead." />}}
 
 ## Bold Claims
 A traditional fast Fourier transform (FFT) runs in O(n*log(n)) time, where n is the number of input samples. Many implementations produce complex valued outputs.
@@ -88,7 +88,7 @@ If an input signal were 180 degrees out of phase, then m_sin would be at its lar
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
 <mrow><mi>m</mi><mo>=</mo><msqrt><mrow><mrow><mo>(</mo><msub><mrow><mi>m</mi></mrow><mrow><mrow><mi>s</mi><mi>i</mi><mi>n</mi></mrow></mrow></msub><msup><mrow><mo>)</mo></mrow><mrow><mn>2</mn></mrow></msup><mo>+</mo><mo>(</mo><msub><mrow><mi>m</mi></mrow><mrow><mrow><mi>c</mi><mi>o</mi><mi>s</mi></mrow></mrow></msub><msup><mrow><mo>)</mo></mrow><mrow><mn>2</mn></mrow></msup></mrow></mrow></msqrt></mrow></math>
 &nbsp;
-{{< alert icon="💡" text="Potential Optimization: Because we often don’t care about the precise value of m, an approximation of the square root often provides adequate output precision and can be significantly faster on some platforms. Alternatively, an approximation for the norm may also be used, potentially for further performance gain." >}}
+{{< alert icon="💡" text="Potential Optimization: Because we often don’t care about the precise value of m, an approximation of the square root often provides adequate output precision and can be significantly faster on some platforms. Alternatively, an approximation for the norm may also be used, potentially for further performance gain." />}}
 
 &nbsp;  
 If phase information is also desired, it can be extracted as such (although this is usually not useful):
@@ -103,7 +103,7 @@ This operation can be run at every single input sample to get a fast-updating ou
 Choosing window size is a careful balance. Too short, and output peaks become very wide with significant sinc-shaped ringing around the center peak, introducing noise in later processing. (This is a result of the transform not having enough information to rule out these other possibilities.) Too long, and you have significant delays and persistence, and more processor power and memory may be required. 
 
 &nbsp;  
-{{< alert icon="💡" text="Potential Optimization: Instead of storing (or even worse, calculating) m_sin and m_cos values for each bin for the entire window every time a sample is added, a single average history value along with the most recent sample can be used for each bin, and an IIR (infinite impulse response) filter can be used to significantly reduce memory requirements. Use a number close to, but under 1 for the IIR filter value c_IIR, e.g. 0.9." >}}
+{{< alert icon="💡" text="Potential Optimization: Instead of storing (or even worse, calculating) m_sin and m_cos values for each bin for the entire window every time a sample is added, a single average history value along with the most recent sample can be used for each bin, and an IIR (infinite impulse response) filter can be used to significantly reduce memory requirements. Use a number close to, but under 1 for the IIR filter value c_IIR, e.g. 0.9." />}}
   
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
 <mrow><msub><mrow><mi>m</mi></mrow><mrow><mrow><mi>s</mi><mi>i</mi><mi>n</mi><mi>a</mi><mi>v</mi><mi>g</mi></mrow></mrow></msub><mo>=</mo><mo>(</mo><msub><mrow><mi>m</mi></mrow><mrow><mrow><mi>s</mi><mi>i</mi><mi>n</mi><mi>a</mi><mi>v</mi><mi>g</mi></mrow></mrow></msub><mo>\*</mo><msub><mrow><mi>c</mi></mrow><mrow><mrow><mi>I</mi><mi>I</mi><mi>R</mi></mrow></mrow></msub><mo>)</mo><mo>+</mo><mo>(</mo><msub><mrow><mi>m</mi></mrow><mrow><mrow><mi>s</mi><mi>i</mi><mi>n</mi><mi>n</mi><mi>e</mi><mi>w</mi></mrow></mrow></msub><mo>\*</mo><mo>(</mo><mn>1</mn><mo>-</mo><msub><mrow><mi>c</mi></mrow><mrow><mrow><mi>I</mi><mi>I</mi><mi>R</mi></mrow></mrow></msub><mo>)</mo><mo>)</mo></mrow></math>
@@ -115,7 +115,7 @@ Once we have calculated one octave, there is a technique we can apply to make ge
 This works because a component in the input signal that was previously an octave too low, got sped up by a factor of 2, pitching the audio up exactly one octave. Note that our window size is now effectively halved, so only a part of the sin and cos tables are multiplied against. We do not use the same window size, as this would mean that lower octaves have more persistence (effectively having a 2x longer window in real-time), which could distort our output.
 
 &nbsp;  
-{{< alert icon="💡" text="Potential Optimization: Because window sizes are halved, this means that our summing operation only takes in half as many sample points. Instead of multiplying by 2 to get the same level, we can simply add the two samples when moving an octave down, which has the advantage of counteracting the reduction in sensitivity, while also reducing processing needed both during (addition instead of addition and division) and after the change (no additional operation instead of multiplication by 2)." >}}
+{{< alert icon="💡" text="Potential Optimization: Because window sizes are halved, this means that our summing operation only takes in half as many sample points. Instead of multiplying by 2 to get the same level, we can simply add the two samples when moving an octave down, which has the advantage of counteracting the reduction in sensitivity, while also reducing processing needed both during (addition instead of addition and division) and after the change (no additional operation instead of multiplication by 2)." />}}
 
 &nbsp;  
 Note that this lower octave only effectively gets a new sample every other input sample. This means that the lower octave only needs to be computed (updated) every 2 input samples.
@@ -127,7 +127,7 @@ Note that this means that each lower octave has half the window size, and as suc
 This also means that the amount of computations done is not constant with every input sample. The worst case (every 2^n samples, where n is [number of octaves -1]) may require significantly longer than the best case (every other sample). If this inconsistency is unacceptable, or the worst case takes too long and upsets sampling on a processing power limited device, the updates can be staggered. This way, the bins may not be perfectly in sync for where their data comes from, but the processing load per sample can be made reasonably constant.
 
 &nbsp;  
-{{< alert icon="💡" text="Potential Optimization: The octaves that need to be updated on a non-staggered system with each sample can be easily retrieved from the LSB (least-significant bits) region of a counter that increments with each incoming sample. The lowest bit being on corresponds to the second-highest octave needing to be updated, the second-lowest bit corresponding to the third-highest octave, etc. This way no additional tracking is required of the octaves requiring updating at each sample." >}}
+{{< alert icon="💡" text="Potential Optimization: The octaves that need to be updated on a non-staggered system with each sample can be easily retrieved from the LSB (least-significant bits) region of a counter that increments with each incoming sample. The lowest bit being on corresponds to the second-highest octave needing to be updated, the second-lowest bit corresponding to the third-highest octave, etc. This way no additional tracking is required of the octaves requiring updating at each sample." />}}
 
 &nbsp;  
 ## Post-Processing

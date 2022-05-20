@@ -15,7 +15,7 @@ toc: true
 [Source Code](https://github.com/CaiB/ColorChord.NET/blob/master/ColorChord.NET/Outputs/PacketUDP.cs)
 
 
-{{< alert icon="ℹ️" text="Individual packets have a size limit of 65,535 bytes. Each colour takes 1 byte." >}}
+{{< alert icon="ℹ️" text="Individual packets have a size limit of 65,535 bytes. Each colour takes 1 byte." />}}
 
 
 ## Supported Protocols
@@ -132,7 +132,7 @@ toc: true
 
 ## Configuring an LED Matrix
 If you are outputting to an LED matrix, there are several options available to help you make sure the output is correct.  
-{{< alert icon="❗" text="If you use these options, you <b>must</b> specify SizeX and SizeY options correctly as well." >}}
+{{< alert icon="❗" text="If you use these options, you <b>must</b> specify SizeX and SizeY options correctly as well." />}}
 
 Looking at your LED matrix from the front, match how it is wired with one of the images below to find the correct options for your setup:
 <table class="table table-dark">

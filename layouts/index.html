@@ -8,7 +8,11 @@
       <img style="max-width:100%;height:auto;" src="ccnettext.gif" />
       <p class="lead">{{ .Params.lead | safeHTML }}</p>
       <a class="btn btn-primary btn-lg px-4 mb-2" href="/docs/{{ if .Site.Params.options.docsVersioning }}{{ .Site.Params.docsVersion }}/{{ end }}general/gettingstarted" role="button">Get Started</a>
-      <p class="meta">A derivative of <a href="https://github.com/cnlohr/colorchord">cnlohr's ColorChord</a> project.</p>
+      {{ if eq $.Site.Language.LanguageName "English" }}
+        <p class="meta">A derivative of <a href="https://github.com/cnlohr/colorchord">cnlohr's ColorChord</a> project.</p>
+      {{ else if eq $.Site.Language.LanguageName "日本語" }}
+        <p class="meta"><a href="https://github.com/cnlohr/colorchord">cnlohrのColorChordプロジェクト</a>の派生版です。</p>
+      {{ end }}
     </div>
   </div>
 </section>
@@ -44,6 +48,39 @@
         <div class="col-lg-5">
           <h2 class="h4">Low Resource Usage</h2>
           <p>A small and efficient program means minimal CPU and RAM usage, even in complex configurations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{ else if eq $.Site.Language.LanguageName "日本語" }}
+  <section class="section section-sm">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-5">
+          <h2 class="h4">オープンソースで無料</h2>
+          <p>自由に閲覧してください。GitHubでの修正と拡張は大歓迎です。どの使い方でもダウンロードおよび使用は無料です。</p>
+        </div>
+        <div class="col-lg-5">
+          <h2 class="h4">クロマティックの可視化</h2>
+          <p>ColorChord.NETは再生されている曲の音符を、一般的な模様と波形ではなく、色スペクトルで一貫性と親近感のあるものに可視化します。</p>
+        </div>
+        <div class="col-lg-5">
+          <h2 class="h4">実時間処理</h2>
+          <p>コンピューターが再生するあらゆるオーディオや楽器や音声に反応するマイク信号にも対応します。すべての信号処理は実時間で行われ、遅延は非常に少ないです。</p>
+        </div>
+      </div>
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-5">
+          <h2 class="h4">クロスプラットフォーム</h2>
+          <p>現在、WindowsとLinuxに対応しており、他のシステムに拡張することも可能です。</p>
+        </div>
+        <div class="col-lg-5">
+          <h2 class="h4">柔軟で、拡張性が高い</h2>
+          <p>豊富な設定によりニーズに合わせた調整が可能です。必要な機能がなければ、簡単に追加できます。</p>
+        </div>
+        <div class="col-lg-5">
+          <h2 class="h4">低リソース利用</h2>
+          <p>小さくて効率的なプログラムは複雑な設定でもCPUとRAMの使用量を最小限にします。</p>
         </div>
       </div>
     </div>

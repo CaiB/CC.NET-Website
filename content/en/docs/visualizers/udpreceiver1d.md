@@ -58,4 +58,4 @@ toc: true
     </tbody>
 </table>
 
-{{< alert icon="ℹ️" text="Make sure your firewall settings allow ColorChord.NET to receive UDP packets." >}}
+{{< alert icon="ℹ️" text="Make sure your firewall settings allow ColorChord.NET to receive UDP packets." />}}

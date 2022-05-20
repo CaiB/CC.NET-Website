@@ -107,4 +107,4 @@ toc: true
     </tbody>
 </table>
 
-{{< alert icon="ℹ️" text="IsCircular=true in continuous mode does not match the behaviour of base ColorChord, as it uses a different, custom algorithm for positioning. However, discrete mode should match the base version.<br />IsCircular=false should match base ColorChord in both continuous and discrete mode." >}}
+{{< alert icon="ℹ️" text="IsCircular=true in continuous mode does not match the behaviour of base ColorChord, as it uses a different, custom algorithm for positioning. However, discrete mode should match the base version.<br />IsCircular=false should match base ColorChord in both continuous and discrete mode." />}}
