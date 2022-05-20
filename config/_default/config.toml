@@ -1,4 +1,4 @@
-baseurl = "https://doks.netlify.app/"
+baseurl = "https://www.colorchord.net/"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
@@ -17,7 +17,7 @@ disableLanguages = ["de", "nl"]
 # add redirects/headers
 [outputs]
 home = ["HTML", "RSS", "REDIRECTS", "HEADERS"]
-section = ["HTML", "RSS", "SITEMAP"]
+section = ["HTML", "SITEMAP"]
 
 # remove .{ext} from text/netlify
 [mediaTypes."text/netlify"]

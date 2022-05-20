@@ -1,10 +1,10 @@
 # Meta Data for SEO
 
 ## Homepage
-title = "Doks"
-titleSeparator = "-"
-titleAddition = "Modern Documentation Theme"
-description = "Doks is a Hugo theme for building secure, fast, and SEO-ready documentation websites, which you can easily update and customize."
+title = "ColorChord.NET"
+titleSeparator = " | "
+titleAddition = "Home"
+description = "ColorChord.NET is a chromatic music visualizer, creating real-time graphics that really react to your music"
 
 ## Documentation
 # docsVersion = "0.3"
@@ -12,21 +12,18 @@ description = "Doks is a Hugo theme for building secure, fast, and SEO-ready doc
 ## Open Graph
 images = ["doks.png"]
 ogLocale = "en_US"
-domainTLD = "doks.netlify.app"
-titleHome = "Doks Theme"
+domainTLD = "colorchord.net"
+titleHome = "ColorChord.NET"
 
 ## Twitter Cards
-twitterSite = "@getdoks"
-twitterCreator = "@henkverlinde"
+twitterCreator = "@themacyler"
 
 ## JSON-LD
 # schemaType = "Person"
 schemaType = "Organization"
-schemaName = "Doks"
-schemaAuthor = "Henk Verlinde"
-schemaAuthorTwitter = "https://twitter.com/henkverlinde"
-schemaAuthorLinkedIn = "https://www.linkedin.com/in/henkverlinde/"
-schemaAuthorGitHub = "https://github.com/h-enk"
+schemaName = "ColorChord.NET"
+schemaAuthor = "Cai B."
+schemaAuthorGitHub = "https://github.com/CaiB"
 schemaLocale = "en-US"
 schemaLogo = "logo-doks.png"
 schemaLogoWidth = 512
@@ -34,9 +31,8 @@ schemaLogoHeight = 512
 schemaImage = "doks.png"
 schemaImageWidth = 1280
 schemaImageHeight = 640
-schemaTwitter = "https://twitter.com/getdoks"
 schemaLinkedIn = ""
-schemaGitHub = "https://github.com/h-enk/doks"
+schemaGitHub = "https://github.com/CaiB/ColorChord.NET"
 schemaSection = "blog"
 
 ## Sitelinks Search Box
@@ -54,10 +50,10 @@ lqipWidth = "20x"
 smallLimit = "300"
 
 # Footer
-footer = "Powered by <a class=\"text-muted\" href=\"https://www.netlify.com/\">Netlify</a>, <a class=\"text-muted\" href=\"https://gohugo.io/\">Hugo</a>, and <a class=\"text-muted\" href=\"https://getdoks.org/\">Doks</a>"
+footer = "Powered by <a href=\"https://gohugo.io/\">Hugo</a> and <a href=\"https://getdoks.org/\">Doks</a>."
 
 # Feed
-copyRight = "Copyright (c) 2020-2021 Henk Verlinde"
+copyRight = "Copyright (c) 2022 Cai B."
 
 # Alert
 alert = false
@@ -69,7 +65,7 @@ alertText = "Introducing the Doks child theme, several DX + UX updates, and more
 # repoHost [Github | Gitea | GitLab | Bitbucket | BitbucketServer ] is used for building the edit link based on git hoster
 repoHost = "GitHub"
 #repoHost = "Gitea"
-docsRepo = "https://github.com/h-enk/doks"
+docsRepo = "https://github.com/CaiB/CC.NET-Website"
 docsRepoBranch = "master"
 docsRepoSubPath = ""
 editPage = false
