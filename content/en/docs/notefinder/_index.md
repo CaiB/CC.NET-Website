@@ -1,6 +1,6 @@
 ---
 title : "NoteFinder"
-description: "NoteFinder"
+description: ""
 lead: ""
 draft: false
 images: []

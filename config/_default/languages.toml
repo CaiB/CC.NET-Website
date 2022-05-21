@@ -12,5 +12,7 @@
   [jp.params]
     languageISO = "JP"
     titleHome = "ホーム"
-    footer = "このサイトは<a href=\"https://gohugo.io/\">Hugo</a>と<a href=\"https://getdoks.org/\">Doks</a>を使用しています。"
-    description = "クロマティックの音楽の可視化は確かに音楽に反応する実時間グラフィックを作成します。"
+    footer = "このサイトは<a href=\"https://gohugo.io/\">Hugo</a>と<a href=\"https://getdoks.org/\">Doks</a>を使用しています。日本語の間違いはご容赦ください、まだ勉強中です。"
+    description = "クロマティックの音楽の可視化は確かに音楽に反応する実時間グラフィックを作成します"
+    alert = true
+    alertText = "すみません、まだ翻訳していないことが多いです。"

@@ -1,6 +1,6 @@
 ---
 title : "Controllers"
-description: "Controllers"
+description: ""
 lead: ""
 draft: false
 images: []

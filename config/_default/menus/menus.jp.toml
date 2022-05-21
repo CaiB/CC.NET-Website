@@ -1,0 +1,50 @@
+[[docs]]
+  name = "一般"
+  weight = 10
+  identifier = "general"
+  url = "/docs/general/"
+
+[[docs]]
+  name = "入力"
+  weight = 50
+  identifier = "sources"
+  url = "/docs/sources/"
+
+[[docs]]
+  name = "音符検出"
+  weight = 60
+  identifier = "notefinder"
+  url = "/docs/notefinder/"
+
+[[docs]]
+  name = "可視化モード"
+  weight = 70
+  identifier = "visualizers"
+  url = "/docs/visualizers/"
+
+[[docs]]
+  name = "出力"
+  weight = 80
+  identifier = "outputs"
+  url = "/docs/outputs/"
+
+[[docs]]
+  name = "制御部"
+  weight = 90
+  identifier = "controllers"
+  url = "/docs/controllers/"
+
+[[main]]
+  name = "文献集"
+  url = "/docs/general/gettingstarted/"
+  weight = 10
+
+[[main]]
+  name = "GitHub"
+  url = "https://github.com/CaiB/ColorChord.NET"
+  weight = 20
+
+[[main]]
+  name = "背景説明"
+  url = "/blog/"
+  weight = 30
