@@ -10,7 +10,7 @@ description = "ColorChord.NET is a chromatic music visualizer, creating real-tim
 # docsVersion = "0.3"
 
 ## Open Graph
-images = ["doks.png"]
+images = ["apple-touch-icon.png"]
 ogLocale = "en_US"
 domainTLD = "colorchord.net"
 titleHome = "ColorChord.NET"
@@ -25,10 +25,10 @@ schemaName = "ColorChord.NET"
 schemaAuthor = "Cai B."
 schemaAuthorGitHub = "https://github.com/CaiB"
 schemaLocale = "en-US"
-schemaLogo = "logo-doks.png"
+schemaLogo = "apple-touch-icon.png"
 schemaLogoWidth = 512
 schemaLogoHeight = 512
-schemaImage = "doks.png"
+schemaImage = "ccnetsocial.png"
 schemaImageWidth = 1280
 schemaImageHeight = 640
 schemaLinkedIn = ""
@@ -39,7 +39,7 @@ schemaSection = "blog"
 siteLinksSearchBox = false
 
 ## Chrome Browser
-themeColor = "#fff"
+themeColor = "#811426"
 
 # Images
 quality = 85
