@@ -23,8 +23,8 @@ jobs:
       - name: Setup Hugo
         run: npm install
 
-      - name: Check for linting errors
-        run: npm test
+#      - name: Check for linting errors
+#        run: npm test
 
       - name: Build
         run: npm run build
