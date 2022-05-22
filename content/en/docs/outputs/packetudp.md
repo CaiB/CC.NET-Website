@@ -138,16 +138,16 @@ Looking at your LED matrix from the front, match how it is wired with one of the
 <table class="table table-dark">
     <tbody>
         <tr> <!-- Linear patterns -->
-            <td><img class="fit-image" src="/Linear.png" /><br />ZigZag = false<br />Mirror = false<br />RotatedArray = false</td>
-            <td><img class="fit-image" src="/LinearMirror.png" /><br />ZigZag = false<br />Mirror = true<br />RotatedArray = false</td>
-            <td><img class="fit-image img-rot-180" src="/Linear.png" /><br />ZigZag = false<br />Mirror = false<br />RotatedArray = true</td>
-            <td><img class="fit-image img-rot-180" src="/LinearMirror.png" /><br />ZigZag = false<br />Mirror = true<br />RotatedArray = true</td>
+            <td><img class="fit-image" src="Linear.png" /><br />ZigZag = false<br />Mirror = false<br />RotatedArray = false</td>
+            <td><img class="fit-image" src="LinearMirror.png" /><br />ZigZag = false<br />Mirror = true<br />RotatedArray = false</td>
+            <td><img class="fit-image img-rot-180" src="Linear.png" /><br />ZigZag = false<br />Mirror = false<br />RotatedArray = true</td>
+            <td><img class="fit-image img-rot-180" src="LinearMirror.png" /><br />ZigZag = false<br />Mirror = true<br />RotatedArray = true</td>
         </tr>
         <tr> <!-- Serpentine patterns -->
-            <td><img class="fit-image" src="/Serpentine.png" /><br />ZigZag = true<br />Mirror = false<br />RotatedArray = false</td>
-            <td><img class="fit-image" src="/SerpentineMirror.png" /><br />ZigZag = true<br />Mirror = true<br />RotatedArray = false</td>
-            <td><img class="fit-image img-rot-180" src="/Serpentine.png" /><br />ZigZag = true<br />Mirror = false<br />RotatedArray = true</td>
-            <td><img class="fit-image img-rot-180" src="/SerpentineMirror.png" /><br />ZigZag = true<br />Mirror = true<br />RotatedArray = true</td>
+            <td><img class="fit-image" src="Serpentine.png" /><br />ZigZag = true<br />Mirror = false<br />RotatedArray = false</td>
+            <td><img class="fit-image" src="SerpentineMirror.png" /><br />ZigZag = true<br />Mirror = true<br />RotatedArray = false</td>
+            <td><img class="fit-image img-rot-180" src="Serpentine.png" /><br />ZigZag = true<br />Mirror = false<br />RotatedArray = true</td>
+            <td><img class="fit-image img-rot-180" src="SerpentineMirror.png" /><br />ZigZag = true<br />Mirror = true<br />RotatedArray = true</td>
         </tr>
     </tbody>
 </table>
