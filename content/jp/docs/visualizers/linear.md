@@ -23,6 +23,7 @@ toc: true
             <th scope="col">Type</th>
             <th scope="col">Default</th>
             <th scope="col">Range</th>
+            <th scope="col"><a href="/docs/general/gettingstarted/#controllability">Controllable</a></th>
             <th scope="col">Description</th>
         </tr>
     </thead>
@@ -32,6 +33,7 @@ toc: true
             <td>string</td>
             <td></td>
             <td>"Linear"</td>
+            <td>❌</td>
             <td><b>Required:</b> Specifies this visualizer type.</td>
         </tr>
         <tr>
@@ -39,6 +41,7 @@ toc: true
             <td>string</td>
             <td></td>
             <td>Any unique name</td>
+            <td>❌</td>
             <td><b>Required:</b> A unique identifier used to attach outputs and controllers.</td>
         </tr>
         <tr>
@@ -46,6 +49,7 @@ toc: true
             <td>int</td>
             <td>50</td>
             <td>1~100000</td>
+            <td>✅</td>
             <td>The number of discrete data points to output. Set this to a low value like 24 if only continuous output is used to save CPU time.</td>
         </tr>
         <tr>
@@ -53,6 +57,7 @@ toc: true
             <td>int</td>
             <td>60</td>
             <td>0~1000</td>
+            <td>✅</td>
             <td>The number of data frames to attempt to calculate per second. Determines how fast the data is output.</td>
         </tr>
         <tr>
@@ -60,6 +65,7 @@ toc: true
             <td>float</td>
             <td>0.1</td>
             <td>0.0~1.0</td>
+            <td>✅</td>
             <td>The minimum intensity of an LED, before it is output as off instead.</td>
         </tr>
         <tr>
@@ -67,6 +73,7 @@ toc: true
             <td>float</td>
             <td>1.0</td>
             <td>0.0~100.0</td>
+            <td>✅</td>
             <td>How strongly inputs should be amplified before processing. Exponential.</td>
         </tr>
         <tr>
@@ -74,6 +81,7 @@ toc: true
             <td>float</td>
             <td>2.0</td>
             <td>0.0~100.0</td>
+            <td>✅</td>
             <td>Multiplier for colour saturation before conversion to RGB and output.</td>
         </tr>
         <tr>
@@ -81,6 +89,7 @@ toc: true
             <td>bool</td>
             <td>false</td>
             <td></td>
+            <td>✅</td>
             <td>Whether to treat the output as a circle, allowing wrap-around, or as a line with defined ends.<br />ℹ️ See below note.</td>
         </tr>
         <tr>
@@ -88,6 +97,7 @@ toc: true
             <td>bool</td>
             <td>false</td>
             <td></td>
+            <td>✅</td>
             <td>Smoothes LED brightness to reduce flickering.</td>
         </tr>
         <tr>
@@ -95,6 +105,7 @@ toc: true
             <td>float</td>
             <td>1.0</td>
             <td>0.0~1.0</td>
+            <td>✅</td>
             <td>The maximum LED brightness. Caps all LEDs at this value, but does not affect values below this threshold.</td>
         </tr>
         <tr>
@@ -102,6 +113,7 @@ toc: true
             <td>bool</td>
             <td>true</td>
             <td></td>
+            <td>✅</td>
             <td>Whether to use this visualizer.</td>
         </tr>
     </tbody>

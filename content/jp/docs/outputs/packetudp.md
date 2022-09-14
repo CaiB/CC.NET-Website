@@ -32,7 +32,7 @@ toc: true
             <th scope="col">Type</th>
             <th scope="col">Default</th>
             <th scope="col">Range</th>
-            <th scope="col">Controllable</th>
+            <th scope="col"><a href="/docs/general/gettingstarted/#controllability">Controllable</a></th>
             <th scope="col">Description</th>
         </tr>
     </thead>
@@ -134,6 +134,22 @@ toc: true
             <td>How tall the LED matrix is. Leave as default if you're not using a matrix, otherwise specify correctly.</td>
         </tr>
         <tr>
+            <td>StartIndex</td>
+            <td>int</td>
+            <td>0</td>
+            <td>0~</td>
+            <td>✅</td>
+            <td>Where in the visualizer data to start reading when putting data into the packet. Use this if you want the packet to only contain a subset of the visualizer data.</td>
+        </tr>
+        <tr>
+            <td>EndIndex</td>
+            <td>int</td>
+            <td>-1</td>
+            <td>-1~</td>
+            <td>✅</td>
+            <td>Where in the visualizer data to stop reading when putting data into the packet. Use this if you want the packet to only contain a subset of the visualizer data. -1 means read to the end, regardless of data amount.</td>
+        </tr>
+        <tr>
             <td>Enable</td>
             <td>bool</td>
             <td>true</td>
@@ -176,7 +192,7 @@ Looking at your LED matrix from the front, match how it is wired with one of the
             <th scope="col">Type</th>
             <th scope="col">Default</th>
             <th scope="col">Range</th>
-            <th scope="col">Controllable</th>
+            <th scope="col"><a href="/docs/general/gettingstarted/#controllability">Controllable</a></th>
             <th scope="col">Description</th>
         </tr>
     </thead>
@@ -217,7 +233,7 @@ Looking at your LED matrix from the front, match how it is wired with one of the
             <th scope="col">Type</th>
             <th scope="col">Default</th>
             <th scope="col">Range</th>
-            <th scope="col">Controllable</th>
+            <th scope="col"><a href="/docs/general/gettingstarted/#controllability">Controllable</a></th>
             <th scope="col">Description</th>
         </tr>
     </thead>
@@ -260,7 +276,7 @@ Note that the maximum size of data in E1.31 is 512 bytes, which for RGB mode tra
             <th scope="col">Type</th>
             <th scope="col">Default</th>
             <th scope="col">Range</th>
-            <th scope="col">Controllable</th>
+            <th scope="col"><a href="/docs/general/gettingstarted/#controllability">Controllable</a></th>
             <th scope="col">Description</th>
         </tr>
     </thead>
