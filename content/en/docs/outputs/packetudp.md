@@ -32,6 +32,7 @@ toc: true
             <th scope="col">Type</th>
             <th scope="col">Default</th>
             <th scope="col">Range</th>
+            <th scope="col">Controllable</th>
             <th scope="col">Description</th>
         </tr>
     </thead>
@@ -41,6 +42,7 @@ toc: true
             <td>string</td>
             <td></td>
             <td>"PacketUDP"</td>
+            <td>❌</td>
             <td><b>Required:</b> Specifies this output type.</td>
         </tr>
         <tr>
@@ -48,6 +50,7 @@ toc: true
             <td>string</td>
             <td></td>
             <td>Any unique name</td>
+            <td>❌</td>
             <td><b>Required:</b> A unique identifier used to attach controllers.</td>
         </tr>
         <tr>
@@ -55,6 +58,7 @@ toc: true
             <td>string</td>
             <td></td>
             <td>Valid visualizer instance name</td>
+            <td>❌</td>
             <td><b>Required:</b> The Name property of the visualizer instance to attach to.</td>
         </tr>
         <tr>
@@ -62,6 +66,7 @@ toc: true
             <td>string</td>
             <td>"Raw"</td>
             <td>Supported protocols from list above</td>
+            <td>❌</td>
             <td>Determines how packets are formatted and split. See below for supported protocols. cnlohr's version only supports "Raw".</td>
         </tr>
         <tr>
@@ -69,6 +74,7 @@ toc: true
             <td>string</td>
             <td>127.0.0.1</td>
             <td>Valid IPs</td>
+            <td>✅</td>
             <td>The IP to send the packets to.</td>
         </tr>
         <tr>
@@ -76,6 +82,7 @@ toc: true
             <td>int</td>
             <td>7777</td>
             <td>0~65535</td>
+            <td>✅</td>
             <td>The port to send the packets to.</td>
         </tr>
         <tr>
@@ -83,6 +90,7 @@ toc: true
             <td>string</td>
             <td>"RGB"</td>
             <td>Any valid pattern</td>
+            <td>❌</td>
             <td>The order in which to send data for each LED. Any combination of characters R, G, B, Y is valid, in any order, including repetition. Number of characters determines how many bytes each LED takes up in the packet.</td>
         </tr>
         <tr>
@@ -90,6 +98,7 @@ toc: true
             <td>bool</td>
             <td>false</td>
             <td></td>
+            <td>❌</td>
             <td>Whether to reverse every odd line of the output for zig-zag wired LED arrays.</td>
         </tr>
         <tr>
@@ -97,6 +106,7 @@ toc: true
             <td>bool</td>
             <td>false</td>
             <td></td>
+            <td>❌</td>
             <td>Whether the LED matrix wiring runs left-to-right (false) or right-to-left (true).</td>
         </tr>
         <tr>
@@ -104,6 +114,7 @@ toc: true
             <td>bool</td>
             <td>false</td>
             <td></td>
+            <td>❌</td>
             <td>Rotates the LED data 180 degrees for an upside-down matrix.</td>
         </tr>
         <tr>
@@ -111,6 +122,7 @@ toc: true
             <td>int</td>
             <td>1</td>
             <td></td>
+            <td>❌</td>
             <td>How wide the LED matrix is. Leave as default if you're not using a matrix, otherwise specify correctly.</td>
         </tr>
         <tr>
@@ -118,6 +130,7 @@ toc: true
             <td>int</td>
             <td>1</td>
             <td></td>
+            <td>❌</td>
             <td>How tall the LED matrix is. Leave as default if you're not using a matrix, otherwise specify correctly.</td>
         </tr>
         <tr>
@@ -125,6 +138,7 @@ toc: true
             <td>bool</td>
             <td>true</td>
             <td></td>
+            <td>✅</td>
             <td>Whether to use this output.</td>
         </tr>
     </tbody>
@@ -162,6 +176,7 @@ Looking at your LED matrix from the front, match how it is wired with one of the
             <th scope="col">Type</th>
             <th scope="col">Default</th>
             <th scope="col">Range</th>
+            <th scope="col">Controllable</th>
             <th scope="col">Description</th>
         </tr>
     </thead>
@@ -171,6 +186,7 @@ Looking at your LED matrix from the front, match how it is wired with one of the
             <td>int</td>
             <td>0</td>
             <td>0~1000</td>
+            <td>✅</td>
             <td>Number of padding bytes to append to the front of the packet.</td>
         </tr>
         <tr>
@@ -178,6 +194,7 @@ Looking at your LED matrix from the front, match how it is wired with one of the
             <td>int</td>
             <td>0</td>
             <td>0~1000</td>
+            <td>✅</td>
             <td>Number of padding bytes to append to the back of the packet.</td>
         </tr>
         <tr>
@@ -185,6 +202,7 @@ Looking at your LED matrix from the front, match how it is wired with one of the
             <td>int</td>
             <td>0</td>
             <td>0~255</td>
+            <td>✅</td>
             <td>What data to put in the padding bytes at the start and end, if present.</td>
         </tr>
     </tbody>
@@ -199,6 +217,7 @@ Looking at your LED matrix from the front, match how it is wired with one of the
             <th scope="col">Type</th>
             <th scope="col">Default</th>
             <th scope="col">Range</th>
+            <th scope="col">Controllable</th>
             <th scope="col">Description</th>
         </tr>
     </thead>
@@ -208,6 +227,7 @@ Looking at your LED matrix from the front, match how it is wired with one of the
             <td>int</td>
             <td>0</td>
             <td>0~255</td>
+            <td>✅</td>
             <td>What data to put in the padding bytes at the start and end, if present.</td>
         </tr>
         <tr>
@@ -215,6 +235,7 @@ Looking at your LED matrix from the front, match how it is wired with one of the
             <td>int</td>
             <td>-1</td>
             <td>-1~65535</td>
+            <td>❌</td>
             <td>The maximum size of packets before splitting. -1 means use protocol specified limit (1490).</td>
         </tr>
         <tr>
@@ -222,6 +243,7 @@ Looking at your LED matrix from the front, match how it is wired with one of the
             <td>bool</td>
             <td>false</td>
             <td></td>
+            <td>❌</td>
             <td>Whether to make all packets the same size, filling blank space with PaddingContent.</td>
         </tr>
     </tbody>
@@ -238,6 +260,7 @@ Note that the maximum size of data in E1.31 is 512 bytes, which for RGB mode tra
             <th scope="col">Type</th>
             <th scope="col">Default</th>
             <th scope="col">Range</th>
+            <th scope="col">Controllable</th>
             <th scope="col">Description</th>
         </tr>
     </thead>
@@ -247,6 +270,7 @@ Note that the maximum size of data in E1.31 is 512 bytes, which for RGB mode tra
             <td>int</td>
             <td>1</td>
             <td>1~63999</td>
+            <td>✅</td>
             <td>The DMX universe to address packets to.</td>
         </tr>
         <tr>
@@ -254,6 +278,7 @@ Note that the maximum size of data in E1.31 is 512 bytes, which for RGB mode tra
             <td>hex string</td>
             <td>9E917B13714044CFB46F7A8298692DE3</td>
             <td>any 16-byte hex string</td>
+            <td>✅</td>
             <td>Unique sender ID. Change this if you have multiple instances of ColorChord.NET on the network.</td>
         </tr>
     </tbody>
