@@ -50,7 +50,12 @@ There are 5 types of components in ColorChord.NET:
 
 A single instance of the application supports a single audio source and Note Finder, any number of visualizers, each with its own set of (any number of) outputs. This allows for a single audio stream to be processed and displayed in almost any desired combination of ways.
 
-Some notes on config files:
+#### Controllability
+
+Many components in ColorChord.NET have "controllable" config options, as seen in the tables in this documentation. This does not refer to whether you can change the setting in the config file (anything that is listed in the docs can be changed by you), but rather refers to whether a *controller* component is able to change this setting while ColorChord.NET is already running.
+
+#### Config File Notes
+
 - You can see a [sample config file here](https://github.com/CaiB/ColorChord.NET/blob/master/ColorChord.NET/sample-config.json). This is what the program auto-generates if no config is found.
 - If an option is not specified in the configuration file, the default value is used.
 - If an unrecognized option or invalid value is specified, a warning is output to the console. Always check for these after modifying the config in case you made a spelling mistake.
