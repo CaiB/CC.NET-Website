@@ -28,37 +28,9 @@ Data format is:
 
 ## Configuration
 
-<table class="table table-dark">
-    <thead class="thead-dark">
-        <tr>
-            <th scope="col">Option Name</th>
-            <th scope="col">Type</th>
-            <th scope="col">Default</th>
-            <th scope="col">Range</th>
-            <th scope="col">Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Type</td>
-            <td>string</td>
-            <td></td>
-            <td>"MemoryMap"</td>
-            <td><b>Required:</b> Specifies this output type.</td>
-        </tr>
-        <tr>
-            <td>Name</td>
-            <td>string</td>
-            <td></td>
-            <td>Any unique name</td>
-            <td><b>Required:</b> A unique identifier used to attach controllers.</td>
-        </tr>
-        <tr>
-            <td>VisualizerName</td>
-            <td>string</td>
-            <td></td>
-            <td>Valid visualizer instance name</td>
-            <td><b>Required:</b> The Name property of the visualizer instance to attach to.</td>
-        </tr>
-    </tbody>
-</table>
+| Option Name | Type | Default | Range | [Controllable](/docs/general/gettingstarted/#controllability)| Description |
+|---|---|---|---|---|---|
+| Type | string |  | "MemoryMap" | ❌ | Required: Specifies this output type. |
+| Name | string |  | Any unique name | ❌ | Required: A unique identifier used to attach controllers. |
+| VisualizerName | string |  | Valid visualizer instance name | ❌ | Required: The Name property of the visualizer instance to attach to. |
+| Enable | bool | true | | ✅ | Whether to output new data into the mapped file. |

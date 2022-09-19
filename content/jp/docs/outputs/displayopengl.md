@@ -24,63 +24,19 @@ toc: true
 
 ## Window Configuration
 
-<table class="table table-dark">
-    <thead class="thead-dark">
-        <tr>
-            <th scope="col">Option Name</th>
-            <th scope="col">Type</th>
-            <th scope="col">Default</th>
-            <th scope="col">Range</th>
-            <th scope="col">Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Type</td>
-            <td>string</td>
-            <td></td>
-            <td>"DisplayOpenGL"</td>
-            <td><b>Required:</b> Specifies this output type.</td>
-        </tr>
-        <tr>
-            <td>Name</td>
-            <td>string</td>
-            <td></td>
-            <td>Any unique name</td>
-            <td><b>Required:</b> A unique identifier used to attach controllers.</td>
-        </tr>
-        <tr>
-            <td>VisualizerName</td>
-            <td>string</td>
-            <td></td>
-            <td>Valid visualizer instance name</td>
-            <td><b>Required:</b> The Name property of the visualizer instance to attach to.</td>
-        </tr>
-        <tr>
-            <td>WindowWidth</td>
-            <td>int</td>
-            <td>1280</td>
-            <td>10~4000</td>
-            <td>The starting width of the window, in pixels.</td>
-        </tr>
-        <tr>
-            <td>WindowHeight</td>
-            <td>int</td>
-            <td>720</td>
-            <td>10~4000</td>
-            <td>The starting height of the window, in pixels.</td>
-        </tr>
-        <tr>
-            <td>Mode</td>
-            <td>object array</td>
-            <td>N/A</td>
-            <td>Valid modes</td>
-            <td>The mode(s) to use. See below for options and configurations. Currently only 1 supported at a time.</td>
-        </tr>
-    </tbody>
-</table>
+| Option Name | Type | Default | Range | [Controllable](/docs/general/gettingstarted/#controllability) | Description |
+|---|---|---|---|---|---|
+| Type | string |  | "DisplayOpenGL" | ❌ | Required: Specifies this output type. |
+| Name | string |  | Any unique name | ❌ | Required: A unique identifier used to attach controllers. |
+| VisualizerName | string |  | Valid visualizer instance name | ❌ | Required: The Name property of the visualizer instance to attach to. |
+| WindowWidth | int | 1280 | 10~4000 | ✅ | The starting width of the window, in pixels. |
+| WindowHeight | int | 720 | 10~4000 | ✅ | The starting height of the window, in pixels. |
+| Enable | bool | true | | ✅ | Whether to show the window and process visualizer data. |
+| Mode | object array | N/A | Valid modes | ❌ | The mode(s) to use. See below for options and configurations. Currently only 1 supported at a time. |
 
 ## Mode Information / Configurations
+
+Display modes are not controllable yet.
 
 ### BlockStrip
 **Input Mode:** Discrete 1D  
@@ -99,26 +55,9 @@ No additional configuration is available.
 **Input Mode:** Continuous 1D  
 [Source Code](https://github.com/CaiB/ColorChord.NET/blob/master/ColorChord.NET/Outputs/Display/SmoothCircle.cs)
 
-<table class="table table-dark">
-    <thead class="thead-dark">
-        <tr>
-            <th scope="col">Option Name</th>
-            <th scope="col">Type</th>
-            <th scope="col">Default</th>
-            <th scope="col">Range</th>
-            <th scope="col">Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>IsInfinity</td>
-            <td>bool</td>
-            <td>false</td>
-            <td></td>
-            <td>false just renders the ring.<br />true also renders a decaying persistence effect, appearing to go off to infinity.</td>
-        </tr>
-    </tbody>
-</table>
+| Option Name | Type | Default | Range | Description |
+|---|---|---|---|---|
+| IsInfinity | bool | false |  | false just renders the ring. true also renders a decaying persistence effect, appearing to go off to infinity. |
 
 ### BlockMatrix
 **Input Mode:** Discrete 2D  
@@ -133,40 +72,11 @@ No additional configuration is available.
 
 Does not use the attached visualizer, but rather shows NoteFinder data directly.
 
-<table class="table table-dark">
-    <thead class="thead-dark">
-        <tr>
-            <th scope="col">Option Name</th>
-            <th scope="col">Type</th>
-            <th scope="col">Default</th>
-            <th scope="col">Range</th>
-            <th scope="col">Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>BaseBrightness</td>
-            <td>float</td>
-            <td>0.0</td>
-            <td>0.0~1.0</td>
-            <td>How bright colours should be if there is no note at that location. Values greater than 0.0 show a ghost of the colour wheel at all times.</td>
-        </tr>
-        <tr>
-            <td>PeakWidth</td>
-            <td>float</td>
-            <td>0.5</td>
-            <td>0.0~10.0</td>
-            <td>How wide peaks should be.</td>
-        </tr>
-        <tr>
-            <td>BrightAmp</td>
-            <td>float</td>
-            <td>1.0</td>
-            <td>0.0~100.0</td>
-            <td>How much brightness should be amplified. If peak width is increased, you may want to increase this as well, and vice versa.</td>
-        </tr>
-    </tbody>
-</table>
+| Option Name | Type | Default | Range | Description |
+|---|---|---|---|---|
+| BaseBrightness | float | 0.0 | 0.0~1.0 | How bright colours should be if there is no note at that location. Values greater than 0.0 show a ghost of the colour wheel at all times. |
+| PeakWidth | float | 0.5 | 0.0~10.0 | How wide peaks should be. |
+| BrightAmp | float | 1.0 | 0.0~100.0 | How much brightness should be amplified. If peak width is increased, you may want to increase this as well, and vice versa. |
 
 ### Radar
 **Input Mode:** Discrete 1D  
@@ -174,40 +84,11 @@ Does not use the attached visualizer, but rather shows NoteFinder data directly.
 
 Spoke resolution (number of segments) is determined by the resolution of the attached visualizer.
 
-<table class="table table-dark">
-    <thead class="thead-dark">
-        <tr>
-            <th scope="col">Option Name</th>
-            <th scope="col">Type</th>
-            <th scope="col">Default</th>
-            <th scope="col">Range</th>
-            <th scope="col">Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Spokes</td>
-            <td>int</td>
-            <td>100</td>
-            <td>1~10000</td>
-            <td>How many spokes (history length / radial lines) there are. Higher shows more history.</td>
-        </tr>
-        <tr>
-            <td>Is3D</td>
-            <td>bool</td>
-            <td>false</td>
-            <td></td>
-            <td>Whether to show a height-variable, tilted-view version with beats causing vertical deflection of the surface.</td>
-        </tr>
-        <tr>
-            <td>FalloffAfter</td>
-            <td>float</td>
-            <td>0.9</td>
-            <td>0.0~1.0</td>
-            <td>How much of the radar is shown at full brightness, after which the rest has a gradient to black applied, ending in front of the "cursor".</td>
-        </tr>
-    </tbody>
-</table>
+| Option Name | Type | Default | Range | Description |
+|---|---|---|---|---|
+| Spokes | int | 100 | 1~10000 | How many spokes (history length / radial lines) there are. Higher shows more history. |
+| Is3D | bool | false |  | Whether to show a height-variable, tilted-view version with beats causing vertical deflection of the surface. |
+| FalloffAfter | float | 0.9 | 0.0~1.0 | How much of the radar is shown at full brightness, after which the rest has a gradient to black applied, ending in front of the "cursor". |
 
 ### NoiseField
 **Input Mode:** Continuous 1D  
@@ -215,40 +96,11 @@ Spoke resolution (number of segments) is determined by the resolution of the att
 
 Fills the screen with procedural noise, shading with the current notes. Amount of the screen that is a colour is roughly proportional to how prominent that note is. Also attempts to do basic beat detection, and change the noise size in time. Very chaotic, flashing lights warning applies even more to this one!
 
-<table class="table table-dark">
-    <thead class="thead-dark">
-        <tr>
-            <th scope="col">Option Name</th>
-            <th scope="col">Type</th>
-            <th scope="col">Default</th>
-            <th scope="col">Range</th>
-            <th scope="col">Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Size1</td>
-            <td>float</td>
-            <td>8.0</td>
-            <td>0.0~10000.0</td>
-            <td>Size scaling factor of the larger, beat-sensitive noise layer</td>
-        </tr>
-        <tr>
-            <td>Size2</td>
-            <td>float</td>
-            <td>3.5</td>
-            <td>0.0~10000.0</td>
-            <td>Size scaling factor of the finer, constant noise layer</td>
-        </tr>
-        <tr>
-            <td>Speed</td>
-            <td>float</td>
-            <td>5.0</td>
-            <td>0.0~10000.0</td>
-            <td>How quickly the pattern appears to move up the screen</td>
-        </tr>
-    </tbody>
-</table>
+| Option Name | Type | Default | Range | Description |
+|---|---|---|---|---|
+| Size1 | float | 8.0 | 0.0~10000.0 | Size scaling factor of the larger, beat-sensitive noise layer |
+| Size2 | float | 3.5 | 0.0~10000.0 | Size scaling factor of the finer, constant noise layer |
+| Speed | float | 5.0 | 0.0~10000.0 | How quickly the pattern appears to move up the screen |
 
 ### Tube
 **Input Mode:** Discrete 1D  
