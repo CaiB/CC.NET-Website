@@ -34,7 +34,7 @@ I have only tested this on Windows, but it theoretically should work on Linux as
 ## Install & Configure ColorChord.NET
 <a class="btn btn-primary btn-lg px-4 mb-2" href="https://www.colorchord.net/docs/general/gettingstarted/" role="button">Set Up ColorChord.NET</a>
 1) Follow the instructions in the Getting Started guide to install ColorChord.NET.
-2) Add or edit an output to be of type `PacketUDP`. Apply the following settings:
+2) Add or edit an output to be of type `PacketUDP`. Apply the following settings in the ColorChord.NET config.json:
 ```json
 "Type": "PacketUDP",
 "Name": "CC.NET to OpenRGB",
@@ -45,6 +45,6 @@ I have only tested this on Windows, but it theoretically should work on Linux as
 "Universe": 1,
 "Enable": true
 ```
-3) Make sure to replace the `VisualizerName` entry with your visualier instance name, and replace `Universe` with the universe number that OpenRGB is expecting.
+3) Make sure to replace the `VisualizerName` entry with your visualizer instance name, and replace `Universe` with the universe number that OpenRGB is expecting.
 4) Start ColorChord.NET, verify there are no config issues in the console, and check to make sure the "Packets Received" number is increasing in OpenRGB. Your device should now be lighting up with ColorChord.NET!
 5) As this is a network output, the computer on which ColorChord.NET is running does not have to be the same computer as OpenRGB is running. You can also control OpenRGB across multiple computers, by simply adding more `PacketUDP` entries in the ColorChord.NET config, and changing the options as appropriate for each one. Musticast should also work to simultaneously send to multiple receivers.

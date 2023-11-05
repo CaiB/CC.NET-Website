@@ -26,6 +26,7 @@ toc: true
 | LightSiding | float | 1.0 | 0.0~100.0 | ✅ | How strongly inputs should be amplified before processing. Exponential. |
 | SaturationAmplifier | float | 2.0 | 0.0~100.0 | ✅ | Multiplier for colour saturation before conversion to RGB and output. |
 | IsCircular | bool | false |  | ✅ | Whether to treat the output as a circle, allowing wrap-around, or as a line with defined ends. ℹ️ See below note. |
+| IsOrdered | bool | false |  | ✅ | Whether notes should be ordered by their colour, or choose locations semi-randomly. |
 | SteadyBright | bool | false |  | ✅ | Smoothes LED brightness to reduce flickering. |
 | LEDLimit | float | 1.0 | 0.0~1.0 | ✅ | The maximum LED brightness. Caps all LEDs at this value, but does not affect values below this threshold. |
 | Enable | bool | true |  | ✅ | Whether to use this visualizer. |

@@ -15,11 +15,14 @@ Thanks for taking the time to check out ColorChord.NET. I hope you enjoy it, and
 
 ## Installation
 
-#### .NET Runtime
-The .NET Runtime is needed in order to run ColorChord.NET. Currently, ColorChord.NET is built against **.NET 5**. There are 2 versions: The **.NET Runtime**, which is required, and the .NET SDK, which is larger, and is only needed if you want to develop .NET software. The SDK includes the Runtime as well.
+#### .NET Desktop Runtime
+The .NET Desktop Runtime is needed in order to run ColorChord.NET. Currently, ColorChord.NET is built against **.NET 7**. There are 2 versions: The **.NET Desktop Runtime**, which is required, and the .NET SDK, which is larger, and is only needed if you want to develop .NET software. The SDK includes the Runtime as well.
 
-You can download the .NET 5 Runtime from Microsoft here, it works on Windows, Linux, and macOS:  
-<a class="btn btn-primary btn-lg px-4 mb-2" href="https://dotnet.microsoft.com/download/dotnet/current/runtime" role="button">Download .NET Runtime</a>
+You can download the .NET 7 Desktop Runtime from Microsoft here, it works on Windows, Linux, and macOS:  
+<a class="btn btn-primary btn-lg px-4 mb-2" href="https://dotnet.microsoft.com/download/dotnet/current/runtime" role="button">Download .NET Desktop Runtime</a>
+
+#### Visual C++ Runtime
+It is **very likely you already have this installed** on your computer, because many different applications rely on it. If you do get an error about a missing DLL, please install the Microsoft Visual C++ Redistributable. You can get the [x64 version from here](https://aka.ms/vs/17/release/vc_redist.x64.exe) (most likely what you need), or the [ARM64 version from here](https://aka.ms/vs/17/release/vc_redist.arm64.exe) (applicable only to some newer tablets/laptops).
 
 #### ColorChord.NET
 Once you have the .NET Runtime installed, you'll need to download ColorChord.NET. You will have 2 choices:
@@ -40,9 +43,10 @@ Installing ColorChord.NET is simple.
 6) Run ColorChord.NET again after editing the config, check the console for any warnings or errors, and enjoy!
 
 ## Configuration
+#### How it Works
 
 There are 5 types of components in ColorChord.NET:
-- Audio Sources: Brings audio data from your system into ColorChord.NET.
+- Audio Sources: Brings audio data from your system into ColorChord.NET. If you're on Linux, you'll likely want to use 
 - Note Finder: Turns raw audio data into note information.
 - Visualizers: Takes note info from the Note Finder, and transforms it into something interesting to look at, ready for output.
 - Outputs: Takes data from a visualizer, and actually displays/outputs it somewhere.
